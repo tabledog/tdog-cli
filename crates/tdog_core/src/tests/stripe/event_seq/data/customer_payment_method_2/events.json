@@ -1,0 +1,226 @@
+{
+    "events": [
+        {
+            "id": "evt_1KyJD0JgUOch852BlVxhICat",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289622,
+            "data": {
+                "object": {
+                    "id": "cus_LfeW3vcW9QYTmZ",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289622,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": null,
+                    "invoice_prefix": "EEA81CBA",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1 Test",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_wlCyONo8e5EYqf",
+                "idempotency_key": "1a97ec0d-8c6a-45f1-8889-e193c4a62d9a"
+            },
+            "type": "customer.created"
+        },
+        {
+            "id": "evt_1KyJD2JgUOch852Bev3E4Ame",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289624,
+            "data": {
+                "object": {
+                    "id": "pm_1KyJD0JgUOch852BcGCNyGSK",
+                    "object": "payment_method",
+                    "billing_details": {
+                        "address": {
+                            "city": null,
+                            "country": null,
+                            "line1": null,
+                            "line2": null,
+                            "postal_code": null,
+                            "state": null
+                        },
+                        "email": null,
+                        "name": null,
+                        "phone": null
+                    },
+                    "card": {
+                        "brand": "visa",
+                        "checks": {
+                            "address_line1_check": null,
+                            "address_postal_code_check": null,
+                            "cvc_check": "pass"
+                        },
+                        "country": "US",
+                        "exp_month": 2,
+                        "exp_year": 2025,
+                        "fingerprint": "9mR59XWgZPcZkekj",
+                        "funding": "credit",
+                        "generated_from": null,
+                        "last4": "4242",
+                        "networks": {
+                            "available": [
+                                "visa"
+                            ],
+                            "preferred": null
+                        },
+                        "three_d_secure_usage": {
+                            "supported": true
+                        },
+                        "wallet": null
+                    },
+                    "created": 1652289623,
+                    "customer": "cus_LfeW3vcW9QYTmZ",
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "pm_1"
+                    },
+                    "type": "card"
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_z8S1DGYsBsaSw4",
+                "idempotency_key": "28846aba-43db-437b-a945-c7ec172079b2"
+            },
+            "type": "payment_method.attached"
+        },
+        {
+            "id": "evt_1KyJD3JgUOch852BZar23NqY",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289625,
+            "data": {
+                "object": {
+                    "id": "cus_LfeW3vcW9QYTmZ",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289622,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": null,
+                    "invoice_prefix": "EEA81CBA",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1 Test",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_3oohpObn068BGC",
+                "idempotency_key": null
+            },
+            "type": "customer.deleted"
+        },
+        {
+            "id": "evt_1KyJDFJgUOch852BNysuyoSX",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289637,
+            "data": {
+                "object": {
+                    "id": "pm_1KyJD0JgUOch852BcGCNyGSK",
+                    "object": "payment_method",
+                    "billing_details": {
+                        "address": {
+                            "city": null,
+                            "country": null,
+                            "line1": null,
+                            "line2": null,
+                            "postal_code": null,
+                            "state": null
+                        },
+                        "email": null,
+                        "name": null,
+                        "phone": null
+                    },
+                    "card": {
+                        "brand": "visa",
+                        "checks": {
+                            "address_line1_check": null,
+                            "address_postal_code_check": null,
+                            "cvc_check": "pass"
+                        },
+                        "country": "US",
+                        "exp_month": 2,
+                        "exp_year": 2025,
+                        "fingerprint": "9mR59XWgZPcZkekj",
+                        "funding": "credit",
+                        "generated_from": null,
+                        "last4": "4242",
+                        "networks": {
+                            "available": [
+                                "visa"
+                            ],
+                            "preferred": null
+                        },
+                        "three_d_secure_usage": {
+                            "supported": true
+                        },
+                        "wallet": null
+                    },
+                    "created": 1652289623,
+                    "customer": "cus_LfeW3vcW9QYTmZ",
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "pm_1",
+                        "update": "pm_1 update 2"
+                    },
+                    "type": "card"
+                },
+                "previous_attributes": {
+                    "metadata": {
+                        "update": null
+                    }
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_Ia8uvlbpsoAf8J",
+                "idempotency_key": "bad734c0-ab2e-4985-a7e7-e424fc5f9508"
+            },
+            "type": "payment_method.updated"
+        }
+    ]
+}

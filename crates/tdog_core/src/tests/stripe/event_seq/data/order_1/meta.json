@@ -1,0 +1,110 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "event_types": [
+                "customer.created",
+                "customer.updated",
+                "payment_method.attached",
+                "customer.source.created",
+                "product.created",
+                "sku.created",
+                "sku.created",
+                "sku.created",
+                "coupon.created",
+                "customer.updated",
+                "order.created",
+                "order.created",
+                "sku.updated",
+                "charge.succeeded",
+                "order.updated",
+                "order.payment_succeeded",
+                "order_return.created",
+                "charge.refunded",
+                "order.updated",
+                "order_return.created",
+                "charge.refunded",
+                "order.updated"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
+            "event_types": [
+                "customer.discount.created",
+                "order.updated",
+                "sku.updated",
+                "charge.succeeded",
+                "order.updated",
+                "order.payment_succeeded"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                28
+            ],
+            "event_types": [
+                "sku.deleted"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

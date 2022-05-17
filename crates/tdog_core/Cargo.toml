@@ -1,0 +1,41 @@
+[package]
+name = "tdog_core"
+version = "0.0.0"
+authors = ["Enzo <enzo.dev.uk@gmail.com>"]
+edition = "2018"
+publish = false
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4"
+log = "0.4.11"
+env_logger = "0.8.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "0.7", features = ["v4"] }
+reqwest = { version = "0.10", features = ["json", "trust-dns", "brotli"] }
+tokio = { version = "0.2", features = ["full"] }
+regex = "1"
+lazy_static = "1.4.0"
+futures = "0.3"
+futures-util = "0.3.8"
+itertools = "0.9.0"
+humantime = "2"
+machine-uid = "0.2.0"
+base64 = "0.13"
+async-trait = "0.1.42"
+futures-core = "0.3.8"
+
+# DB clients.
+rusqlite = {version = "0.25.3", features = ["bundled", "backup"]}
+mysql = "*"
+# Needed because `mysql` `params!` macro returns this type (HashMap<String, MySQLValue, BuildHasherDefault<XxHash>>).
+twox-hash = "1"
+postgres = {version = "0.19.1", features = ["with-serde_json-1", "with-chrono-0_4"]}
+
+
+unicon = {path = "./../unicon"}
+unicon_proc_macro = {path = "./../unicon_proc_macro"}
+stripe_client = {path = "./../stripe_client"}

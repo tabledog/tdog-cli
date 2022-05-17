@@ -1,0 +1,5 @@
+# @see https://stackoverflow.com/a/39168640/4949386
+# @see https://matklad.github.io/2021/08/22/large-rust-workspaces.html
+# @see https://blog.iany.me/2020/10/gotchas-to-publish-rust-crates-in-a-workspace/
+[workspace]
+members = ["crates/*"]

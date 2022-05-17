@@ -1,0 +1,47 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "a"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2
+            ],
+            "event_types": [
+                "customer.created",
+                "payment_method.attached",
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "b"
+            ],
+            "event_indexes": [
+                3
+            ],
+            "event_types": [
+                "payment_method.updated"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

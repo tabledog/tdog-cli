@@ -1,0 +1,158 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "event_types": [
+                "customer.created",
+                "payment_method.attached",
+                "customer.updated",
+                "coupon.created",
+                "coupon.created",
+                "product.created",
+                "product.created",
+                "product.created",
+                "price.created",
+                "product.created",
+                "price.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+            ],
+            "event_types": [
+                "customer.updated",
+                "invoiceitem.created",
+                "invoiceitem.updated",
+                "customer.discount.created",
+                "customer.discount.created",
+                "invoice.created",
+                "customer.discount.deleted",
+                "customer.discount.deleted",
+                "payment_intent.created",
+                "invoice.updated",
+                "invoice.finalized",
+                "invoice.updated",
+                "invoice.voided",
+                "payment_intent.canceled",
+                "invoiceitem.created",
+                "invoiceitem.updated",
+                "customer.discount.created",
+                "customer.discount.created",
+                "invoice.created",
+                "customer.discount.deleted",
+                "customer.discount.deleted",
+                "payment_intent.created",
+                "invoice.updated",
+                "invoice.finalized",
+                "invoice.updated",
+                "invoice.marked_uncollectible",
+                "invoiceitem.created",
+                "invoiceitem.updated",
+                "customer.discount.created",
+                "customer.discount.created",
+                "invoice.created",
+                "invoiceitem.created",
+                "invoice.updated",
+                "customer.discount.deleted",
+                "customer.discount.deleted",
+                "payment_intent.created",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "invoice.updated",
+                "invoice.paid",
+                "invoice.payment_succeeded",
+                "invoice.finalized",
+                "invoice.sent"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [],
+            "event_types": []
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

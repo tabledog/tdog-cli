@@ -1,0 +1,56 @@
+Next tables to add:
+
+
+# Priority 1
+
+radar_review
+radar_early_fraud_warning
+
+
+# Priority 2
+
+file
+payout
+
+
+# Priority 3
+
+
+connect_*
+issuing_*
+
+
+
+
+
+
+# May implement later when dl-polling implemented when processing events.
+
+mandate
+- !has_dl_list
+- !has_direct_event (only updates, no create/delete).
+- !is_expanded_in_event
+
+
+balance
+- !has_direct_event
+
+
+
+
+
+
+
+
+
+# Notes
+
+- Check tables are written to Sigma first to ensure they are important enough to used in queries (E.g session is more like temp state and is missing events).
+
+
+
+
+
+
+
+

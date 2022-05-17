@@ -1,0 +1,172 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0
+            ],
+            "event_types": [
+                "customer.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                1
+            ],
+            "event_types": [
+                "source.chargeable"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "event_types": [
+                "customer.updated",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "payment_method.attached",
+                "customer.source.created",
+                "customer.source.created",
+                "customer.source.updated",
+                "customer.source.updated"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                46,
+                47
+            ],
+            "event_types": [
+                "customer.created",
+                "customer.updated"
+            ]
+        },
+        {
+            "i": 4,
+            "download": {
+                "file": "downloads/dl-step-4.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                48
+            ],
+            "event_types": [
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 5,
+            "download": {
+                "file": "downloads/dl-step-5.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

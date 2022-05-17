@@ -1,0 +1,186 @@
+{
+    "events": [
+        {
+            "id": "evt_1KyJ4eJgUOch852B5etvrsYE",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289104,
+            "data": {
+                "object": {
+                    "id": "cus_LfeNoSmomjDvfh",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289104,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": null,
+                    "invoice_prefix": "662E5A80",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1.customer_1 Test",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_8YDRXMpoKfmgaK",
+                "idempotency_key": "3a828832-b675-42f9-88fb-14d6b519ffa8"
+            },
+            "type": "customer.created"
+        },
+        {
+            "id": "evt_1KyJ4qJgUOch852BGlfTFhtW",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289116,
+            "data": {
+                "object": {
+                    "id": "cus_LfeNoSmomjDvfh",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289104,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": null,
+                    "invoice_prefix": "662E5A80",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1.customer_1 Test Update 0",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                },
+                "previous_attributes": {
+                    "name": "C1.customer_1 Test"
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_SyVIrUxwXt7x5S",
+                "idempotency_key": "fe3757b3-4d54-4554-9c22-36ec2a85418f"
+            },
+            "type": "customer.updated"
+        },
+        {
+            "id": "evt_1KyJ4qJgUOch852B5zQRKjob",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289116,
+            "data": {
+                "object": {
+                    "id": "cus_LfeNoSmomjDvfh",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289104,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": "update.1@gmail.com",
+                    "invoice_prefix": "662E5A80",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1.customer_1 Test Update 0",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                },
+                "previous_attributes": {
+                    "email": null
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_lqaQdmAkXmvxD2",
+                "idempotency_key": "79720f3e-575a-4d14-8827-b6d19bc539d3"
+            },
+            "type": "customer.updated"
+        },
+        {
+            "id": "evt_1KyJ53JgUOch852BSaCBOlph",
+            "object": "event",
+            "api_version": "2020-08-27",
+            "created": 1652289128,
+            "data": {
+                "object": {
+                    "id": "cus_LfeNoSmomjDvfh",
+                    "object": "customer",
+                    "address": null,
+                    "balance": 0,
+                    "created": 1652289104,
+                    "currency": null,
+                    "default_source": null,
+                    "delinquent": false,
+                    "description": null,
+                    "discount": null,
+                    "email": "update.1@gmail.com",
+                    "invoice_prefix": "662E5A80",
+                    "invoice_settings": {
+                        "custom_fields": null,
+                        "default_payment_method": null,
+                        "footer": null
+                    },
+                    "livemode": false,
+                    "metadata": {
+                        "tid": "c_1"
+                    },
+                    "name": "C1.customer_1 Test Update 0",
+                    "phone": null,
+                    "preferred_locales": [],
+                    "shipping": null,
+                    "tax_exempt": "none",
+                    "test_clock": null
+                }
+            },
+            "livemode": false,
+            "pending_webhooks": 0,
+            "request": {
+                "id": "req_T3YF7FaQJbOV9m",
+                "idempotency_key": null
+            },
+            "type": "customer.deleted"
+        }
+    ]
+}

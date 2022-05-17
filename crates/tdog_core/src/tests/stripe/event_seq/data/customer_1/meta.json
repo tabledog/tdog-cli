@@ -1,0 +1,60 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0
+            ],
+            "event_types": [
+                "customer.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                1,
+                2
+            ],
+            "event_types": [
+                "customer.updated",
+                "customer.updated"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                3
+            ],
+            "event_types": [
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

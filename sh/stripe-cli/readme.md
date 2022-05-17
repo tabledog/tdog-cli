@@ -1,0 +1,2 @@
+- Note: many states/fields cannot be set via the web UI.
+    - This directory contains bash scripts to set fields for testing.

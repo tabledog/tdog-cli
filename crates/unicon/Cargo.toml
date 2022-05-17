@@ -1,0 +1,58 @@
+[package]
+name = "unicon"
+version = "0.0.0"
+description = "Universal Connection (SQL engine connection). Allows CRUD'ing a 1-level-deep Rust struct reprenting a row into any SQL DB."
+
+authors = ["Enzo <enzo.dev.uk@gmail.com>"]
+edition = "2018"
+publish = false
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.11"
+regex = "1"
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# DB clients
+mysql = "20.0.1"
+mysql_common = "*"
+# Needed because `mysql` `params!` macro returns this type (HashMap<String, mysql::Value, BuildHasherDefault<XxHash>>).
+twox-hash = "1"
+rusqlite = { version = "0.25.3", features = ["bundled", "backup", "serde_json"] }
+postgres = { version = "0.19.1", features = ["with-serde_json-1", "with-chrono-0_4"] }
+
+# Not used because macOS is too strict in verifying a CA cert (must be added to keychain with Always Trust, disable domain checking for some certs, cert must be valid for less than 825 days).
+#postgres-native-tls = "0.5.0"
+#native-tls = "0.2"
+
+postgres-openssl = "0.5.0"
+
+# `OPENSSL_DIR=/opt/homebrew/opt/openssl@1.1 cargo build --release --target x86_64-apple-darwin` (on mac M1)
+# - Issue: `Undefined symbols for architecture x86_64:`
+#openssl = { version = "0.10.38" }
+
+# Builds ok on Mac M1 targetting `x86_64-apple-darwin` and `x86_64-pc-windows-gnu` (with `cross`, not `cargo`)
+openssl = { version = "0.10.38", features = ["vendored"] }
+
+# Macro related, matches `uc_macro` crate.
+# Pin `syn` to avoid breaking change error:, "use syn::export::TokenStream2; could not find `export`".
+syn = { version = "=1.0.57", features = ["full", "extra-traits"] }
+quote = "1.0"
+lazy_static = "1.4.0"
+
+
+chrono = "0.4"
+uuid = { version = "0.7", features = ["v4"] }
+
+
+
+
+[dev-dependencies]
+# Used in tests; must be dev-dependency to avoid cyclic reference.
+unicon_proc_macro = { path = "./../unicon_proc_macro" }
+
+

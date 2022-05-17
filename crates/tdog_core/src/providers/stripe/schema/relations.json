@@ -1,0 +1,789 @@
+{
+    "relations": [
+        {
+            "owner_file_name": "balance_transaction",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "balance_transaction: i.balance_transaction.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note",
+                    "matches": [
+                        "customer_balance_transaction: x2.customer_balance_transaction.and_then(|x3| match x3 {"
+                    ]
+                },
+                {
+                    "file_name": "dispute",
+                    "matches": [
+                        "balance_transactions: i.balance_transactions.to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "refund",
+                    "matches": [
+                        "balance_transaction: i.balance_transaction.get_id_or_none(),",
+                        "failure_balance_transaction: i.failure_balance_transaction.get_id_or_none(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "charge",
+            "copies": [
+                {
+                    "file_name": "dispute",
+                    "matches": [
+                        "charge: if let UniCharge::String(s) = &i.charge {",
+                        "is_charge_refundable: false,"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "charge: x.charge.to_json_key_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "order",
+                    "matches": [
+                        "charge: x.charge.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                },
+                {
+                    "file_name": "payment_intent",
+                    "matches": [
+                        "charges: x.charges.as_ref().and_then(|x| x.data.get_pks_json_opt().into()),"
+                    ]
+                },
+                {
+                    "file_name": "refund",
+                    "matches": [
+                        "charge: i.charge.get_id_or_none(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "coupon",
+            "copies": [
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "coupon: x.coupon.id.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "order",
+                    "matches": [
+                        "external_coupon_code: x.external_coupon_code,"
+                    ]
+                },
+                {
+                    "file_name": "promotion",
+                    "matches": [
+                        "coupon: x2.coupon.id,"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "credit_note",
+            "copies": [
+                {
+                    "file_name": "credit_note_line_item",
+                    "matches": [
+                        "credit_note_line_item_id: None,",
+                        "credit_note_id: x.parent.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "post_payment_credit_notes_amount: x.post_payment_credit_notes_amount,",
+                        "pre_payment_credit_notes_amount: x.pre_payment_credit_notes_amount,"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "credit_note_line_item",
+            "copies": []
+        },
+        {
+            "owner_file_name": "customer",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "customer: i.customer.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note",
+                    "matches": [
+                        "customer: x2.customer.get_id_any(),",
+                        "customer_balance_transaction: x2.customer_balance_transaction.and_then(|x3| match x3 {"
+                    ]
+                },
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "customer: x.customer.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "customer: if let UniCustomerC00F6E::String(s) = &x.customer {",
+                        "customer_address: x.customer_address.to_json_or_none(),",
+                        "customer_email: x.customer_email.clone(),",
+                        "customer_name: x.customer_name.clone(),",
+                        "customer_phone: x.customer_phone.clone(),",
+                        "customer_shipping: x.customer_shipping.to_json_or_none(),",
+                        "customer_tax_exempt: x.customer_tax_exempt.to_json_key_or_none(),",
+                        "customer_tax_ids: x.customer_tax_ids.to_json_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "customer: if let UniCustomerC00F6E::String(s) = &x.customer {"
+                    ]
+                },
+                {
+                    "file_name": "order",
+                    "matches": [
+                        "customer: x.customer.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                },
+                {
+                    "file_name": "payment_intent",
+                    "matches": [
+                        "customer: x.customer.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "payment_method",
+                    "matches": [
+                        "customer: match &i.customer {"
+                    ]
+                },
+                {
+                    "file_name": "promotion",
+                    "matches": [
+                        "customer: x2.customer.and_then(|x3| match x3 {"
+                    ]
+                },
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "customer: x2.customer.and_then(|x3| x3.get_id_any().into()),",
+                        "customer_email: x2.customer_email,"
+                    ]
+                },
+                {
+                    "file_name": "setup_intent",
+                    "matches": [
+                        "customer: i.customer.as_ref().and_then(|x| if let UniCustomerC00F6E::String(c) = x { c.clone().into() } else { unreachable!(\"Expected customer string.\") }),"
+                    ]
+                },
+                {
+                    "file_name": "source",
+                    "matches": [
+                        "customer: s.customer.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "customer,"
+                    ]
+                },
+                {
+                    "file_name": "subscription_schedule",
+                    "matches": [
+                        "customer: if let API::UniCustomerC00F6E::String(s2) = &x.customer {"
+                    ]
+                },
+                {
+                    "file_name": "tax_id",
+                    "matches": [
+                        "customer: x2.customer.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "discount",
+            "copies": [
+                {
+                    "file_name": "credit_note",
+                    "matches": [
+                        "discount_amount: x2.discount_amount,",
+                        "discount_amounts: x2.discount_amounts.to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note_line_item",
+                    "matches": [
+                        "discount_amount: x2.discount_amount,",
+                        "discount_amounts: x2.discount_amounts.to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "customer",
+                    "matches": [
+                        "discount: x.discount.as_ref().and_then(|x| x.id.clone().into()),"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "discounts: x.discounts.as_ref().and_then(|x2| {",
+                        "total_discount_amounts: x.total_discount_amounts.as_ref().and_then(|x2| x2.to_json().into()),"
+                    ]
+                },
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "discounts: x.discounts.as_ref().and_then(|x2| {",
+                        "discount_amounts: x.discount_amounts.as_ref().and_then(|x2| x2.to_json().into()),",
+                        "discountable: x.discountable,"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "discounts: x.discounts.as_ref().and_then(|x2| {",
+                        "discountable: x.discountable,"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "discount: x.discount.as_ref().and_then(|x2| x2.id.clone().into()),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "dispute",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "disputed: i.disputed,"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "invoice",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "invoice: i.invoice.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note",
+                    "matches": [
+                        "invoice: x2.invoice.get_id_any(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note_line_item",
+                    "matches": [
+                        "invoice_line_item: x2.invoice_line_item,"
+                    ]
+                },
+                {
+                    "file_name": "customer",
+                    "matches": [
+                        "invoice_prefix: x.invoice_prefix.clone(),",
+                        "invoice_settings: x.invoice_settings.to_json_or_none(),",
+                        "next_invoice_sequence: x.next_invoice_sequence.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "invoice: x.invoice.clone(),",
+                        "invoice_item: x.invoice_item.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "invoice_line_item_id: None,",
+                        "invoice: x2.parent.clone(),",
+                        "invoice_item: x.invoice_item.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "invoiceitem_id: None,",
+                        "invoice: x.invoice.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "payment_intent",
+                    "matches": [
+                        "invoice: x.invoice.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "latest_invoice: x.latest_invoice.as_ref().and_then(|x2| {",
+                        "next_pending_invoice_item_invoice: unix_to_iso_wrap(x.next_pending_invoice_item_invoice),",
+                        "pending_invoice_item_interval: x.pending_invoice_item_interval.to_json_or_none(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "invoice_line_item",
+            "copies": [
+                {
+                    "file_name": "credit_note_line_item",
+                    "matches": [
+                        "invoice_line_item: x2.invoice_line_item,"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "invoiceitem",
+            "copies": []
+        },
+        {
+            "owner_file_name": "notification_event",
+            "copies": []
+        },
+        {
+            "owner_file_name": "order",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "order_id: i.order.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "order_return",
+                    "matches": [
+                        "order_return_id: None,",
+                        "order_id: x2.order.and_then(|x| x.get_id_any().into()),"
+                    ]
+                },
+                {
+                    "file_name": "source",
+                    "matches": [
+                        "source_order: s.source_order.to_json_or_none(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "order_return",
+            "copies": []
+        },
+        {
+            "owner_file_name": "payment_intent",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "payment_intent: i.payment_intent.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "dispute",
+                    "matches": [
+                        "payment_intent: i.payment_intent.as_ref().and_then(|x| if let UniPaymentIntent::String(s) = x {"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "payment_intent: x.payment_intent.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "refund",
+                    "matches": [
+                        "payment_intent: i.payment_intent.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "payment_intent: x2.payment_intent.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "payment_method",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "payment_method: i.payment_method.clone(),",
+                        "payment_method_details: i.payment_method_details.to_json_or_none(),",
+                        "payment_method_details_type: i.payment_method_details.pick_opt(|x| &x.type_x),"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "default_payment_method: x.default_payment_method.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "payment_intent",
+                    "matches": [
+                        "payment_method: x.payment_method.get_id_or_none(),",
+                        "payment_method_options: x.payment_method_options.to_json_or_none(),",
+                        "payment_method_types: x.payment_method_types.to_json_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "payment_method_types: x2.payment_method_types.to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "setup_intent",
+                    "matches": [
+                        "payment_method: i.payment_method.as_ref().and_then(|x| if let UniPaymentMethod::String(s) = x { s.clone().into() } else { unreachable!(\"Expected string as payment method\") }),",
+                        "payment_method_options: i.payment_method_options.as_ref().and_then(|x| x.to_json_or_none()),",
+                        "payment_method_types: i.payment_method_types.to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "default_payment_method: x.default_payment_method.as_ref().and_then(|x2| {"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "plan",
+            "copies": []
+        },
+        {
+            "owner_file_name": "price",
+            "copies": [
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "price: x.price.as_ref().and_then(|x2| x2.id.clone().into()),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "price: x.price.as_ref().and_then(|x2| x2.id.clone().into()),"
+                    ]
+                },
+                {
+                    "file_name": "sku",
+                    "matches": [
+                        "price: x.price,"
+                    ]
+                },
+                {
+                    "file_name": "subscription_item",
+                    "matches": [
+                        "price: s.price.id.clone(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "product",
+            "copies": [
+                {
+                    "file_name": "plan",
+                    "matches": [
+                        "product: x.product.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "price",
+                    "matches": [
+                        "product: if let API::UniProduct297E1E::String(s) = &x.product {"
+                    ]
+                },
+                {
+                    "file_name": "sku",
+                    "matches": [
+                        "product: x.product.get_id_any(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "promotion",
+            "copies": [
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "promotion_code: x.promotion_code.as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "allow_promotion_codes: x2.allow_promotion_codes,"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "refund",
+            "copies": [
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "amount_refunded: i.amount_refunded,",
+                        "refunded: i.refunded,",
+                        "refunds: i.refunds.data.get_pks_json(),"
+                    ]
+                },
+                {
+                    "file_name": "credit_note",
+                    "matches": [
+                        "refund: x2.refund.and_then(|x3| match x3 {"
+                    ]
+                },
+                {
+                    "file_name": "dispute",
+                    "matches": [
+                        "is_charge_refundable: false,"
+                    ]
+                },
+                {
+                    "file_name": "order_return",
+                    "matches": [
+                        "refund: x2.refund.and_then(|x| x.get_id_any().into()),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "session",
+            "copies": [
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "checkout_session: x.checkout_session.clone(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "setup_intent",
+            "copies": [
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "setup_intent: x2.setup_intent.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "pending_setup_intent: x.pending_setup_intent.as_ref().and_then(|x2| {"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "sku",
+            "copies": []
+        },
+        {
+            "owner_file_name": "source",
+            "copies": [
+                {
+                    "file_name": "balance_transaction",
+                    "matches": [
+                        "source: i.source.as_ref().as_ref().and_then(|x| match x {"
+                    ]
+                },
+                {
+                    "file_name": "charge",
+                    "matches": [
+                        "source_transfer: i.source_transfer.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "customer",
+                    "matches": [
+                        "default_source: (*x.default_source).as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "default_source: (*x.default_source).as_ref().and_then(|x2| {"
+                    ]
+                },
+                {
+                    "file_name": "notification_event",
+                    "matches": [
+                        "resource,"
+                    ]
+                },
+                {
+                    "file_name": "refund",
+                    "matches": [
+                        "source_transfer_reversal: i.source_transfer_reversal.get_id_or_none(),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "default_source: (*x.default_source).as_ref().and_then(|x2| {"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "subscription",
+            "copies": [
+                {
+                    "file_name": "discount",
+                    "matches": [
+                        "subscription: x.subscription.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "subscription: x.subscription.as_ref().and_then(|x2| match x2 {",
+                        "subscription_proration_date: x.subscription_proration_date.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "subscription: x.subscription.clone(),",
+                        "subscription_item: x.subscription_item.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "subscription: x.subscription.as_ref().and_then(|x2| {",
+                        "subscription_item: x.subscription_item.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "session",
+                    "matches": [
+                        "subscription: x2.subscription.and_then(|x3| x3.get_id_any().into()),"
+                    ]
+                },
+                {
+                    "file_name": "subscription_item",
+                    "matches": [
+                        "subscription_item_id: None,",
+                        "subscription: s.subscription.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "subscription_schedule",
+                    "matches": [
+                        "subscription_schedule_id: None,",
+                        "subscription: x.subscription.as_ref().and_then(|x2| {",
+                        "released_subscription: x.released_subscription.clone(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "subscription_item",
+            "copies": [
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "subscription_item: x.subscription_item.clone(),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "subscription_item: x.subscription_item.clone(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "subscription_schedule",
+            "copies": []
+        },
+        {
+            "owner_file_name": "tax_id",
+            "copies": [
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "customer_tax_ids: x.customer_tax_ids.to_json_or_none(),"
+                    ]
+                }
+            ]
+        },
+        {
+            "owner_file_name": "tax_rate",
+            "copies": [
+                {
+                    "file_name": "credit_note_line_item",
+                    "matches": [
+                        "tax_rates: x2.tax_rates.iter().map(|x3| x3.id.clone()).collect::<Vec<String>>().to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice",
+                    "matches": [
+                        "default_tax_rates: x.default_tax_rates.iter().map(|x2| x2.id.clone()).collect::<Vec<String>>().to_json(),"
+                    ]
+                },
+                {
+                    "file_name": "invoice_line_item",
+                    "matches": [
+                        "tax_rates: x.tax_rates.as_ref().and_then(|x2| x2.iter().map(|x3| x3.id.clone()).collect::<Vec<String>>().to_json().into()),"
+                    ]
+                },
+                {
+                    "file_name": "invoiceitem",
+                    "matches": [
+                        "tax_rates: x.tax_rates.as_ref().and_then(|x2| x2.iter().map(|x3| x3.id.clone()).collect::<Vec<String>>().to_json_or_none()),"
+                    ]
+                },
+                {
+                    "file_name": "subscription",
+                    "matches": [
+                        "default_tax_rates: x.default_tax_rates.as_ref().and_then(|x| x.get_pks_json_opt()),"
+                    ]
+                },
+                {
+                    "file_name": "subscription_item",
+                    "matches": [
+                        "tax_rates: s.tax_rates.as_ref().and_then(|x| x.get_pks_json_opt()),"
+                    ]
+                }
+            ]
+        }
+    ]
+}

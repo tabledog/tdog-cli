@@ -1,0 +1,289 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "event_types": [
+                "customer.created",
+                "payment_method.attached",
+                "customer.updated",
+                "product.created",
+                "product.created",
+                "plan.created",
+                "price.created",
+                "coupon.created",
+                "coupon.created",
+                "coupon.created",
+                "coupon.created",
+                "coupon.created",
+                "coupon.created",
+                "payment_intent.created",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "customer.updated",
+                "customer.discount.created",
+                "customer.discount.deleted",
+                "invoice.created",
+                "invoice.finalized",
+                "invoice.paid",
+                "invoice.payment_succeeded",
+                "customer.subscription.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69
+            ],
+            "event_types": [
+                "coupon.updated",
+                "customer.discount.created",
+                "customer.discount.created",
+                "customer.subscription.updated",
+                "customer.discount.updated",
+                "customer.subscription.updated",
+                "customer.discount.updated",
+                "customer.subscription.updated",
+                "customer.discount.updated",
+                "customer.subscription.updated",
+                "invoiceitem.created",
+                "invoiceitem.updated",
+                "invoice.created",
+                "invoiceitem.created",
+                "invoiceitem.created",
+                "customer.discount.created",
+                "customer.discount.created",
+                "customer.discount.created",
+                "customer.discount.deleted",
+                "invoiceitem.updated",
+                "invoiceitem.updated",
+                "invoiceitem.updated",
+                "customer.discount.created",
+                "customer.discount.created",
+                "invoice.created",
+                "payment_intent.created",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "invoice.updated",
+                "invoice.paid",
+                "invoice.payment_succeeded",
+                "invoice.finalized",
+                "customer.discount.deleted",
+                "customer.discount.deleted",
+                "payment_intent.created",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "invoice.updated",
+                "invoice.paid",
+                "invoice.payment_succeeded",
+                "invoice.finalized",
+                "invoiceitem.created",
+                "customer.discount.created",
+                "invoiceitem.updated",
+                "customer.discount.created",
+                "invoice.created"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+            ],
+            "event_types": [
+                "coupon.deleted",
+                "coupon.deleted",
+                "coupon.deleted",
+                "coupon.deleted",
+                "coupon.deleted",
+                "coupon.deleted"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                76,
+                77,
+                78
+            ],
+            "event_types": [
+                "customer.discount.deleted",
+                "customer.subscription.updated",
+                "customer.discount.deleted"
+            ]
+        },
+        {
+            "i": 4,
+            "download": {
+                "file": "downloads/dl-step-4.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                79,
+                80,
+                81
+            ],
+            "event_types": [
+                "customer.discount.deleted",
+                "invoiceitem.deleted",
+                "invoice.updated"
+            ]
+        },
+        {
+            "i": 5,
+            "download": {
+                "file": "downloads/dl-step-5.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                82,
+                83
+            ],
+            "event_types": [
+                "invoice.deleted",
+                "customer.discount.deleted"
+            ]
+        },
+        {
+            "i": 6,
+            "download": {
+                "file": "downloads/dl-step-6.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                84,
+                85,
+                86,
+                87
+            ],
+            "event_types": [
+                "coupon.created",
+                "customer.discount.created",
+                "customer.subscription.updated",
+                "customer.subscription.deleted"
+            ]
+        },
+        {
+            "i": 7,
+            "download": {
+                "file": "downloads/dl-step-7.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                88,
+                89,
+                90
+            ],
+            "event_types": [
+                "coupon.created",
+                "customer.discount.created",
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 8,
+            "download": {
+                "file": "downloads/dl-step-8.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

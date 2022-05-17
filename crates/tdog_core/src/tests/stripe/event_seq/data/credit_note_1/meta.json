@@ -1,0 +1,112 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "event_types": [
+                "customer.created",
+                "payment_method.attached",
+                "customer.updated",
+                "product.created",
+                "price.created",
+                "customer.updated",
+                "invoiceitem.created",
+                "invoiceitem.updated",
+                "invoice.created",
+                "payment_intent.created",
+                "invoice.updated",
+                "invoice.finalized"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+            ],
+            "event_types": [
+                "invoice.updated",
+                "credit_note.created",
+                "invoice.updated",
+                "credit_note.voided",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "invoice.updated",
+                "invoice.paid",
+                "invoice.payment_succeeded",
+                "charge.refunded",
+                "invoice.updated",
+                "customer.updated",
+                "credit_note.created",
+                "credit_note.updated"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                26,
+                27,
+                28,
+                29
+            ],
+            "event_types": [
+                "charge.refunded",
+                "invoice.updated",
+                "customer.updated",
+                "credit_note.created"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

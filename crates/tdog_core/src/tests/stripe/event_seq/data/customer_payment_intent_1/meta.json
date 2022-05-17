@@ -1,0 +1,151 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "event_types": [
+                "customer.created",
+                "payment_method.attached",
+                "payment_intent.created",
+                "payment_intent.created",
+                "payment_intent.created",
+                "payment_intent.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "event_types": [
+                "charge.failed",
+                "payment_intent.payment_failed",
+                "charge.failed",
+                "payment_intent.payment_failed",
+                "payment_intent.requires_action",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "charge.succeeded",
+                "payment_intent.succeeded"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "event_types": [
+                "charge.pending",
+                "payment_intent.processing",
+                "charge.succeeded",
+                "payment_intent.succeeded",
+                "charge.dispute.created",
+                "charge.dispute.funds_withdrawn",
+                "charge.dispute.closed"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                22,
+                23,
+                24,
+                25,
+                26
+            ],
+            "event_types": [
+                "charge.dispute.updated",
+                "charge.updated",
+                "charge.refunded",
+                "charge.refunded",
+                "charge.refund.updated"
+            ]
+        },
+        {
+            "i": 4,
+            "download": {
+                "file": "downloads/dl-step-4.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                27,
+                28,
+                29,
+                30,
+                31
+            ],
+            "event_types": [
+                "payment_intent.created",
+                "charge.succeeded",
+                "payment_intent.amount_capturable_updated",
+                "charge.captured",
+                "payment_intent.succeeded"
+            ]
+        },
+        {
+            "i": 5,
+            "download": {
+                "file": "downloads/dl-step-5.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                32
+            ],
+            "event_types": [
+                "payment_intent.canceled"
+            ]
+        },
+        {
+            "i": 6,
+            "download": {
+                "file": "downloads/dl-step-6.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

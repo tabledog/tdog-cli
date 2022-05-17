@@ -1,0 +1,261 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0
+            ],
+            "event_types": [
+                "customer.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                1
+            ],
+            "event_types": [
+                "customer.created"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                2
+            ],
+            "event_types": [
+                "source.chargeable"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                3
+            ],
+            "event_types": [
+                "source.chargeable"
+            ]
+        },
+        {
+            "i": 4,
+            "download": {
+                "file": "downloads/dl-step-4.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                4
+            ],
+            "event_types": [
+                "source.chargeable"
+            ]
+        },
+        {
+            "i": 5,
+            "download": {
+                "file": "downloads/dl-step-5.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                5,
+                6,
+                7
+            ],
+            "event_types": [
+                "customer.updated",
+                "payment_method.attached",
+                "customer.source.created"
+            ]
+        },
+        {
+            "i": 6,
+            "download": {
+                "file": "downloads/dl-step-6.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [],
+            "event_types": []
+        },
+        {
+            "i": 7,
+            "download": {
+                "file": "downloads/dl-step-7.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                8,
+                9,
+                10
+            ],
+            "event_types": [
+                "customer.updated",
+                "payment_method.attached",
+                "customer.source.created"
+            ]
+        },
+        {
+            "i": 8,
+            "download": {
+                "file": "downloads/dl-step-8.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        },
+        {
+            "i": 9,
+            "download": {
+                "file": "downloads/dl-step-9.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                11
+            ],
+            "event_types": [
+                "payment_method.updated"
+            ]
+        },
+        {
+            "i": 10,
+            "download": {
+                "file": "downloads/dl-step-10.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                12
+            ],
+            "event_types": [
+                "payment_method.updated"
+            ]
+        },
+        {
+            "i": 11,
+            "download": {
+                "file": "downloads/dl-step-11.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                13
+            ],
+            "event_types": [
+                "charge.succeeded"
+            ]
+        },
+        {
+            "i": 12,
+            "download": {
+                "file": "downloads/dl-step-12.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                14
+            ],
+            "event_types": [
+                "charge.succeeded"
+            ]
+        },
+        {
+            "i": 13,
+            "download": {
+                "file": "downloads/dl-step-13.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                15
+            ],
+            "event_types": [
+                "charge.updated"
+            ]
+        },
+        {
+            "i": 14,
+            "download": {
+                "file": "downloads/dl-step-14.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                16,
+                17,
+                18
+            ],
+            "event_types": [
+                "customer.updated",
+                "customer.source.deleted",
+                "payment_method.detached"
+            ]
+        },
+        {
+            "i": 15,
+            "download": {
+                "file": "downloads/dl-step-15.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                19,
+                20,
+                21
+            ],
+            "event_types": [
+                "customer.updated",
+                "customer.source.deleted",
+                "payment_method.detached"
+            ]
+        },
+        {
+            "i": 16,
+            "download": {
+                "file": "downloads/dl-step-16.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                22
+            ],
+            "event_types": [
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 17,
+            "download": {
+                "file": "downloads/dl-step-17.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [
+                23
+            ],
+            "event_types": [
+                "customer.deleted"
+            ]
+        },
+        {
+            "i": 18,
+            "download": {
+                "file": "downloads/dl-step-18.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}

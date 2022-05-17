@@ -1,0 +1,102 @@
+{
+    "steps": [
+        {
+            "i": 0,
+            "download": {
+                "file": "downloads/dl-step-0.sqlite"
+            },
+            "tags": [
+                "c"
+            ],
+            "event_indexes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "event_types": [
+                "customer.created",
+                "coupon.created",
+                "product.created",
+                "product.created",
+                "product.created",
+                "price.created",
+                "product.created",
+                "price.created",
+                "customer.updated",
+                "invoiceitem.created",
+                "invoiceitem.created",
+                "invoiceitem.created"
+            ]
+        },
+        {
+            "i": 1,
+            "download": {
+                "file": "downloads/dl-step-1.sqlite"
+            },
+            "tags": [
+                "u"
+            ],
+            "event_indexes": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "event_types": [
+                "invoiceitem.updated",
+                "invoiceitem.deleted",
+                "invoiceitem.updated",
+                "invoiceitem.updated",
+                "invoice.created",
+                "invoiceitem.deleted",
+                "invoice.updated",
+                "invoice.updated",
+                "customer.discount.created",
+                "invoiceitem.updated"
+            ]
+        },
+        {
+            "i": 2,
+            "download": {
+                "file": "downloads/dl-step-2.sqlite"
+            },
+            "tags": [
+                "d"
+            ],
+            "event_indexes": [
+                22,
+                23,
+                24
+            ],
+            "event_types": [
+                "invoice.deleted",
+                "invoiceitem.deleted",
+                "customer.discount.deleted"
+            ]
+        },
+        {
+            "i": 3,
+            "download": {
+                "file": "downloads/dl-step-3.sqlite"
+            },
+            "tags": [],
+            "event_indexes": [],
+            "event_types": []
+        }
+    ]
+}
