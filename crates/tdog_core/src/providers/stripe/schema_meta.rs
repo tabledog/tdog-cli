@@ -181,7 +181,7 @@ fn get_versions() -> (&'static str, &'static str) {
 // Gets the lib-app crate Cargo.toml version.
 // Cannot use `cli` crate as Cargo does not allow cycling dependencies (cli <-> lib_app)
 // const VERSION: &'static str = env!("CARGO_PKG_VERSION");
-const VERSION: &'static str = "0.5.0";
+const VERSION: &'static str = "0.6.0";
 
 pub fn get_cli_version() -> &'static str {
     VERSION
