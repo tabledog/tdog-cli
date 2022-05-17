@@ -144,7 +144,17 @@ impl WriteTree for SetupIntent {
                     // - These need to be expanded to insert payment methods for deleted customers.
                     writes.append(&mut PaymentMethod::upsert_tree(utx, run_id, &x3));
                 }
-                UniPaymentMethod::String(_) => unreachable!("SetupIntent.payment_method should always be expanded at dl time."),
+                UniPaymentMethod::String(id) => {
+                    // Issue: This can be a string even when expand=true.
+                    // - E.g. `stripe setup_intents list --expand data.payment_method` can return a string `payment_method`.
+                    // - This happens when a SetupIntent is created without explicitly attaching a payment method.
+                    // - The payment_method ID seems to be a placeholder - it cannot be expanded or fetched directly.
+                    // Fix: Ignore for now - no queryable data, customer should be referencing the SetupIntent.id.
+
+                    // unreachable!("SetupIntent.payment_method should always be expanded at dl time.");
+
+                    debug!("Ignoring non-data placeholder SetupIntent.payment_method ID {:?}", id);
+                }
             }
         }
 
