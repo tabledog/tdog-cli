@@ -21,8 +21,6 @@
 # - ubuntu:16.04 = (Ubuntu GLIBC 2.23-0ubuntu11.3) 2.23 (2016-02-19)
 # - ubuntu:14.04 = (Ubuntu EGLIBC 2.19-0ubuntu6.15) 2.19 (2014-02-07)
 
-
-
 name: Build and release on tag.
 
 on:
