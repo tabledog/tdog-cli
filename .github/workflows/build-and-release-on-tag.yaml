@@ -23,6 +23,8 @@
 
 name: Build and release on tag.
 
+
+#on: [ push ]
 on:
     push:
         tags:
@@ -48,26 +50,27 @@ jobs:
                         os: macos-latest
                         rust: stable
                         target: x86_64-apple-darwin
-        # Issue: cargo build = `error: failed to run custom build command for `openssl-sys v0.9.73`, `This perl implementation doesn't produce Unix like paths`
-        #                    -   build: windows
-        #                        os: windows-latest
-        #                        rust: stable
-        #                        target: x86_64-pc-windows-gnu
+                    -   build: windows
+                        os: ubuntu-18.04
+                        rust: stable
+                        target: x86_64-pc-windows-gnu
         steps:
             -   name: Checkout repository
                 uses: actions/checkout@v2
                 with:
                     fetch-depth: 1
 
+            # @see https://github.com/actions/cache/blob/main/examples.md#rust---cargo
             -   name: Cache
-                uses: actions/cache@v2
+                uses: actions/cache@v3
                 with:
                     path: |
-                        ~/.cargo/registry
-                        ~/.cargo/git
-                        ~/.rustup
-                        target
-                    key: ${{ runner.os }}-${{ matrix.rust }}
+                        ~/.cargo/bin/
+                        ~/.cargo/registry/index/
+                        ~/.cargo/registry/cache/
+                        ~/.cargo/git/db/
+                        target/
+                    key: ${{ runner.os }}-${{ matrix.rust }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
             -   name: Install Rust
                 run: |
@@ -75,8 +78,20 @@ jobs:
                     rustup target add ${{ matrix.target }}
                     rustup show
 
-            -   name: Build
-                run: cargo build --release --package tdog_cli --target ${{ matrix.target }}
+            # Use `cross` to avoid `openssl-sys` crate compilation issues on the Windows OS (E.g. `This perl implementation doesn't produce Unix like paths`).
+            -   name: Build (Windows with cross).
+                if: matrix.target == 'x86_64-pc-windows-gnu'
+                uses: actions-rs/cargo@v1
+                with:
+                    command: build
+                    args: --release --package tdog_cli --target=${{ matrix.target }}
+                    use-cross: true
+
+
+            -   name: Build (macOS, Linux)
+                if: matrix.target != 'x86_64-pc-windows-gnu'
+                run: |
+                    cargo build --release --package tdog_cli --target ${{ matrix.target }}
 
             -   name: Rename binary file
                 shell: bash
