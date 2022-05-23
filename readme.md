@@ -8,18 +8,19 @@
 
 # Install
 ```bash
-# Mac OS
+# macOS:
 curl -L --output /usr/local/bin/tdog https://github.com/tabledog/tdog-cli/releases/latest/download/tdog-x86_64-apple-darwin
 
-# Or for Linux:
+# Linux:
 #curl -L --output /usr/local/bin/tdog https://github.com/tabledog/tdog-cli/releases/latest/download/tdog-x86_64-unknown-linux-gnu
-
 
 chmod +x /usr/local/bin/tdog;
 ```
 
-[Releases](https://github.com/tabledog/tdog-cli/releases)
-
+- [Releases](https://github.com/tabledog/tdog-cli/releases)
+	- [macOS](https://github.com/tabledog/tdog-cli/releases/latest/download/tdog-x86_64-apple-darwin)
+	- [Linux](https://github.com/tabledog/tdog-cli/releases/latest/download/tdog-x86_64-unknown-linux-gnu)
+	- [Windows](https://github.com/tabledog/tdog-cli/releases/latest/download/tdog-x86_64-pc-windows-gnu.exe)
 
 # Usage
 ```bash
