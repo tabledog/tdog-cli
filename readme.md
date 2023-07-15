@@ -2,7 +2,7 @@
 
 `tdog` is a CLI to download your Stripe account to a SQLite database.
 
-- [table.dog](https://table.dog)
+- [tabledog.dev](https://tabledog.dev)
 - [Sponsor development](https://github.com/sponsors/emadda)
 
 

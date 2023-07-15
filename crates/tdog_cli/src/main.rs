@@ -152,7 +152,7 @@ fn get_json_str() -> Result<String> {
                 }
             }
             "--version" | "-v" => {
-                println!("Version {}\nhttps://table.dog", get_cli_version());
+                println!("Version {}\nhttps://tabledog.dev", get_cli_version());
                 std::process::exit(0);
             }
             _ => {}
